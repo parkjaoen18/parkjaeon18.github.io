@@ -1,0 +1,169 @@
+<html>
+  <meta charset="UTF-8" /><meta
+    content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5"
+    name="viewport"
+  /><meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  /><link
+    href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+    rel="stylesheet"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+  <link
+    href="https://hanyauntukmu.likeadream.repl.co/style.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <script src="https://hanyauntukmu.likeadream.repl.co/script.js"></script>
+  <head> 
+    <title> Hello :D</title>
+  </head>
+  <style>
+    body {
+      background-image: url(https://i.postimg.cc/NMLZ6Zk5/IMG-20220207-131156-010.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position-y: bottom;
+    }
+    body::before {
+      content: "" !important;
+      color: transparent !important;
+    }
+  </style>
+  <body>
+    <div id="bodyblur">
+      <!-- <img
+        src="https://i.postimg.cc/NMLZ6Zk5/IMG-20220207-131156-010.jpg"
+        width="100%"
+        height="100%"
+      /> -->
+    </div>
+
+    <div id="Content">
+      <div class="image">
+        <img
+          src="https://i.postimg.cc/pXyt3f7m/terima-kasih-makasih.gif"
+          width="130px"
+          height="130px"
+        />
+      </div>
+      <div>
+        <blockquote>
+          <p id="text"></p>
+          <p id="text2"></p>
+        </blockquote>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      function play() {
+        var audio = new Audio(
+          "https://sndup.net/f5zc/d"
+        )
+        audio.play()
+      }
+
+      const swals = Swal.mixin({
+        allowOutsideClick: false,
+        cancelButtonColor: "#FF0040",
+      })
+      const swalsy = Swal.mixin({
+        confirmButtonText: "Iya",
+        allowOutsideClick: false,
+      })
+      const swalst = Swal.mixin({
+        allowOutsideClick: false,
+        showConfirmButton: false,
+        timer: 24000,
+        timerProgressBar: true,
+      })
+      const intro = Swal.mixin({
+        allowOutsideClick: false,
+        showConfirmButton:false,
+        timer: 20000,
+        timerProgressBar: true,
+      })
+      const verse1 = Swal.mixin({
+        allowOutsideClick: false,
+        showConfirmButton:false,
+        timer: 16000,
+        timerProgressBar: true,
+      })
+      const verse2 = Swal.mixin({
+        allowOutsideClick: false,
+        showConfirmButton:false,
+        timer: 16000,
+        timerProgressBar: true,
+      })
+      const verse3 = Swal.mixin({
+        allowOutsideClick: false,
+        showConfirmButton:false,
+        timer: 15000,
+        timerProgressBar: true,
+      })
+      const verse4 = Swal.mixin({
+        allowOutsideClick: false,
+        showConfirmButton:false,
+        timer: 12000,
+        timerProgressBar: true,
+      })
+
+      async function mulaitanya() {
+        var { isConfirmed: tanyawal } = await swals.fire({
+          title: `Halo :D kamu bisa klik tombol dibawah ya`,
+          imageUrl: "https://i.postimg.cc/J0NB8wtQ/Aarah-bawah.gif",
+          imageWidth: 120,
+          imageHeight: 120,
+          confirmButtonText: "Okay",
+          allowOutsideClick: false,
+          showCancelButton: false,
+        })
+        if (tanyawal) {
+          play()
+          kuis()
+        }
+      }
+
+      async function kuis() {
+        await intro.fire({
+          title: "Intro",
+          imageUrl: "https://i.postimg.cc/cH6SZdzR/animasi-bergerak-not-musik-0012.gif",
+          imageWidth: 120,
+          imageHeight: 120,
+        })
+        await verse1.fire({
+          title: "Atas kasih dan kehendak yang maha pencipta kita telah sepakat bersatu, bersatu dalam satu rampak barisan menentang kemiskinan",
+          imageUrl: "https://i.postimg.cc/15LPWzGq/download.jpg",
+          imageWidth: 120,
+          imageHeight: 120,
+        })
+        await verse2.fire({
+          title: "Atas rahmat dan bimbingan yang maha kuasa. Kita telah bertekad berjuang, berjuang untuk satu tujuan mulia mencapai Indonesia sentosa",
+          imageUrl: "https://i.postimg.cc/15LPWzGq/download.jpg",
+          imageWidth: 120,
+          imageHeight: 120,
+        })
+        await verse3.fire({
+          title: "Bersama PDI Perjuangan 2x. Wadah kedaulatan rakyat Indonesia",
+          imageUrl: "https://i.postimg.cc/15LPWzGq/download.jpg",
+          imageWidth: 120,
+          imageHeight: 120,
+        })
+        await verse4.fire({
+          title: "Atas berkat dan Kemurahan Yang Maha Esa. PDI PERJUANGAN JAYA!!!",
+          imageUrl: "https://i.postimg.cc/15LPWzGq/download.jpg",
+          imageWidth: 120,
+          imageHeight: 120,
+        })
+        text = "Terima Kasih"
+        emotnama = "&#10084;"
+        text2 = "Semoga hari kalian menyenangkan :)"
+        showDiv()
+      }
+      mulaitanya()
+    </script>
+  </body>
+</html>
